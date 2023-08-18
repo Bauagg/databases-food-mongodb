@@ -17,7 +17,7 @@ const getMenuRestoran = async (req, res, next) => {
 
 const getMenuRestoranById = async (req, res, next) => {
     try {
-        const newMenuRestoran = await MenuRestoran.findOne({ _id: req.params.id })
+        const newMenuRestoran = await MenuRestoran.findOne({ _id: req.params.id }).populate('restoran')
         res.status(200).json({
             error: false,
             message: 'lihat data by id successfully',

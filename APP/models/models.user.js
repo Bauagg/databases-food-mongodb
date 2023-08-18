@@ -27,9 +27,9 @@ const modelUser = mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['admin', 'user', 'koki', 'pelayan'],
+        enum: ['admin', 'koki', 'pelayan', 'pelanggan'],
         message: '{VALUE} is not suport',
-        default: 'user'
+        default: 'pelanggan'
     }
 })
 
